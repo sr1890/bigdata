@@ -1,0 +1,163 @@
+
+############################################
+http://localhost:1080/splash.html#
+
+maria_dev/maria_dev
+
+https://grouplens.org/datasets/movielens/
+
+############################################
+
+HDFS
+
+Mapreduce 
+	Mapper
+	Shuffle & short
+	reducer
+	MRjob class
+	MRStep
+Installing mrjob on HDP 2.5
+
+
+yum install python-pip 
+pip install mrjob==0.5.11    
+pip install google-api-python-client==1.6.4
+yum install nano 
+wget http://media.sundog-soft.com/hadoop/ml-100k/u.data
+wget http://media.sundog-soft.com/hadoop/ml-100k/u.item
+wget http://media.sundog-soft.com/hadoop/Spark.zip
+wget http://media.sundog-soft.com/hadoop/RatingsBreakdown.py
+
+ python RatingsBreakdown.py -r hadoop --hadoop-streaming-jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar u.data
+
+
+
+Scoop for export/import from cluster 
+
+Mt sql root password : 
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'hadoop';
+FLUSH PRIVILEGES;
+
+wget http://media.sundog-soft.com/hadoop/movielens.sql
+
+grant all privileges on *.* to movielens.* to ''@'localhost' identified by '' with grant option;
+
+grant all privileges on *.* to ''@'localhost' identified by '' with grant option;
+
+databases:
+
+HBASE:
+nosql
+Cassandra: 
+mongodo
+
+client:
+
+Apache drill --> access muti data source (MongoDB HBASE) no cassandra
+Phoniex --> Only HBASE SQL driver for HBASE
+	really fast:
+	
+Presto: Same like Drill also Dristrubuted queries across different data stores:
+	optimized for analyticla query OLTP data warehouse
+	developed by facebook
+	cassandra connector
+	
+Manging Cluster: 
+
+	Hadoop yarn:
+		yet another Resource negotiator
+	Tez:
+	Apache MeSOS:
+		Resource negotiator
+		System that manages resources across your data centers
+		
+	Zookeeper:
+	Oozie: Orchesting your hadoop jobs
+		Workflow chain Mapreduce,Hive,Pig
+	
+	Zeppline:
+	
+	Hue:
+	Hahoop user experiance 
+	
+###############
+
+Kafka:
+	streaming 
+Apache Flume:
+
+##Analyzing stream data
+	Spark Streming
+	Apche Storm
+	Flink
+	
+Impala --> 
+Accumolo--> HBASE alternative 
+Redis: in-memory data stores
+ignite: alternative to redis in memory data fabrics support ACID guratees 
+		sql support in memory 
+Elastic search: 
+		distrubutaed documnet search engine integrated to kibana 
+kinesis: 
+
+Apache NIFI: Directed graph of data routing 
+
+Falcon: data governance that sits on top of Ooze
+
+Apache Slider: deploymet root of YARN cluster
+
+#####################
+Cloudera
+#####################
+ISMAC
+	IOT,Cloud,Social,Analysis,Mobility
+	
+#####################
+HDFC: hadoop distrubuated file system
+		Datanode: Worker Node
+		NameNode: 
+##########################################
+MY SQL SETUP : 
+##########################################
+
+	Lecture : MySQL Database setup and Installation
+
+	CentOS 6
+
+	sudo su
+	yum -y update
+	yum -y install mysql-server mysql-connector-java
+	service mysqld status
+	service mysqld start
+	chkconfig mysqld on
+	/usr/bin/mysql_secure_installation
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	mysql -u root -h localhost -p
+	mysql > show database
+	mysql > create user 'temp'@'%' identified by 'password123';
+	mysql > grant all privileges on *.* to 'temp'@'%' with grant option;
+	mysql > quit;
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	mysql -u temp -h localhost -p
+	mysql > show database
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	service iptables status
+	service iptables stop
+	chkconfig iptables off
+	iptables --flush
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	mysql -u root -p
+	create database reportmanager;
+	create user 'reportmanager'@'%' identified by 'password123';
+	grant all privileges on reportmanager.* to 'reportmanager'@'%';
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+##########################################		
+	
+	
+		
+
+
+
+
