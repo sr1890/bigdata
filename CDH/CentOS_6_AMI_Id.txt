@@ -1,0 +1,34 @@
+CentOS 6 AMI ID
+
+AWS AMI 
+CentOS 6 Updates with HVM
+
+Region	ID	
+US East (N. Virginia)	ami-e3fdd999	
+US East (Ohio)	ami-ff48629a	
+US West (N. California)	ami-ade6e5cd	
+US West (Oregon)	ami-8b44f2f3	
+Canada (Central)	ami-29ac294d	
+EU (Frankfurt)	ami-347be65b	
+EU (Ireland)	ami-a625b8df	
+EU (London)	ami-3d6b7059	
+EU (Paris)	ami-66fd4b1b	
+Asia Pacific (Singapore)	ami-74fb8908	
+Asia Pacific (Sydney)	ami-b0ba46d2	
+Asia Pacific (Seoul)	ami-7146e61f	
+Asia Pacific (Tokyo)	ami-88b923ee	
+Asia Pacific (Mumbai)	ami-3d9ec952	
+South America (Sao Paulo)	ami-e3b2f08f
+
+
+CentOS 6 (x86_64) - with Updates
+
+US East (N. Virginia)	ami-bc8131d4	
+US West (N. California)	ami-33c1ca76	
+US West (Oregon)	ami-a9de9c99	
+EU (Frankfurt)	ami-c8b587d5	
+EU (Ireland)	ami-4ac6653d	
+Asia Pacific (Singapore)	ami-0aaf8858	
+Asia Pacific (Sydney)	ami-ef5133d5	
+Asia Pacific (Tokyo)	ami-25436924	
+South America (Sao Paulo)	ami-9b962386
